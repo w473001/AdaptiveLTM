@@ -1,0 +1,51 @@
+{
+  "description": "Test config",
+  "algorithms": [],
+  "global": {
+    "n_tasks": 4,
+    "n_actions": 16,
+    "total_trials_global": 12000,
+    "n_epochs": 3,
+    "n_switches_per_epoch": 7,
+    "super_pool_size": 32,
+    "epoch_pool_size": 4,
+    "epoch_block_pool_size": 12,
+    "random_switches_within_epoch": false,
+    "good_loss_upper_bound": 0.05,
+    "bad_loss_upper_bound": 0.5,
+    "n_experts": 1024,
+    "epsilon": 0.01
+  },
+  "local": {
+    "ADAPTLTM": {
+      "eta_optimal": false,
+      "eta": 1.0,
+      "alpha": 0.04,
+      "rho": 0.5
+    },
+    "SWARM": {
+      "eta_optimal": false,
+      "eta": 1.0
+    },
+    "EXP4": {
+      "eta_optimal": false,
+      "eta": 2.0
+    },
+    "FIXED_SHARE": {
+      "eta_optimal": true,
+      "eta": 0.0,
+      "alpha_optimal": true,
+      "alpha": 0.0
+    }
+  },
+  "tuning_parameters": {
+    "n_iterations_per_training_step": 2,
+    "n_tuning_steps": 12,
+    "n_processes": 12,
+    "eta_min": 0.5,
+    "eta_max": 2.0,
+    "alpha_min": 0.001,
+    "alpha_max": 0.5,
+    "seed": 42
+  }
+}
