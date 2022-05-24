@@ -91,3 +91,5 @@ For example
 
 The "n_processes" parameter in "tuning_parameters" also applies when running main.py itself, as this uses python's 
 multiprocessing library.
+
+Results are stored as a pickled dictionary object in /output/ . The keys of the dictionary are the algorithm names from the configuration file, and the values are numpy arrays of shape (n_runs, total_trials_global), containing losses from each run.
